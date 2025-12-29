@@ -7,11 +7,11 @@ use App\Http\Controllers\Auth\ForgotPasswordController;
 Route::prefix('/v1')->middleware('api')->group(function () {
     Route::post('/login', [LoginController::class, 'login']);
     Route::post('/verify-otp', [LoginController::class, 'verifyOtp']);
-    Route::middleware('auth:sanctum')->group(function () {
+    Route::middleware('auth:api')->group(function () {
         Route::get('/user', function (Request $request) {
             return $request->user();
         });
-        Route::post('/logout', [LoginController::class, 'logout'])->name('user.logout')->middleware(['auth:sanctum']);
+        Route::post('/logout', [LoginController::class, 'logout'])->name('user.logout')->middleware(['auth:api']);
     });
     Route::post('/register', [RegisterController::class, 'register']);
     Route::get('/user-info', [RegisterController::class, 'userInfo'])->name('user.info')->middleware(['auth:sanctum', 'roles:user,owner,receptionist']);

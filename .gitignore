@@ -3,7 +3,6 @@
 /public/storage
 /storage/*.key
 /vendor
-.env
 .env.backup
 .env.shipbob
 .phpunit.result.cache
@@ -13,5 +12,5 @@ Homestead.yaml
 npm-debug.log
 yarn-error.log
 /.idea
-/.vscode
 .env.shipbob
+config.bat

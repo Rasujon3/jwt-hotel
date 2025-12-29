@@ -14,10 +14,12 @@
         "laravel/tinker": "^2.7",
         "league/flysystem-aws-s3-v3": "^3.0",
         "maatwebsite/excel": "^1.1",
+        "maennchen/zipstream-php": "^2.2",
         "mpdf/mpdf": "^8.2",
-        "spatie/laravel-medialibrary": "^10.15",
+        "spatie/laravel-medialibrary": "10.14.0",
         "spatie/laravel-permission": "^6.23",
         "stevebauman/location": "^7.6",
+        "tymon/jwt-auth": "2.1",
         "yajra/laravel-datatables-oracle": "^10.7"
     },
     "require-dev": {

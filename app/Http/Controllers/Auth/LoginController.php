@@ -13,6 +13,7 @@ use Exception;
 use Illuminate\Support\Facades\Log;
 use Illuminate\Support\Facades\RateLimiter;
 use Carbon\Carbon;
+use Tymon\JWTAuth\Facades\JWTAuth;
 
 class LoginController extends AppBaseController
 {
@@ -52,7 +53,10 @@ class LoginController extends AppBaseController
             RateLimiter::clear($key);
 
             // Generate API token immediately if OTP is not enabled
-            $token = $user->createToken('API Token')->plainTextToken;
+//            $token = $user->createToken('API Token')->plainTextToken;
+
+            // JWT token create
+            $token = JWTAuth::fromUser($user);
 
             DB::commit();
 

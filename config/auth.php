@@ -12,8 +12,13 @@ return [
             'provider' => 'users',
         ],
 
-        'sanctum' => [
-            'driver' => 'sanctum',
+        // 'sanctum' => [
+        //     'driver' => 'sanctum',
+        //     'provider' => 'users',
+        // ],
+
+        'api' => [
+            'driver' => 'jwt',
             'provider' => 'users',
         ],
     ],
